@@ -1,6 +1,10 @@
 import random
 number = random.randint(1, 100) # Change the range fir 10 to 100
 guess = int(input())
+if guess < number:
+    print("Too low!")
+elif guess > number:
+    print("Too high!")
 if guess == number:
  print("You win!")
 else:
