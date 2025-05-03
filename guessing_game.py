@@ -1,5 +1,8 @@
 import random
 number = random.randint(1, 100) # Change the range fir 10 to 100
+attempr = 0
+attempt += 1
+
 guess = int(input())
 if guess < number:
     print("Too low!")
@@ -16,3 +19,4 @@ while True:
     print("Play again? (y/n)") 
     if input().lower() != 'y': 
         break
+print(f"You made {attempt} attempts.")
