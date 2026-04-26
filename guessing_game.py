@@ -1,22 +1,24 @@
 import random
-number = random.randint(1, 100) # Change the range fir 10 to 100
-attempr = 0
-attempt += 1
 
-guess = int(input())
-if guess < number:
-    print("Too low!")
-elif guess > number:
-    print("Too high!")
-if guess == number:
- print("You win!")
-else:
- print(f"Wrong! The number was {number}")
+while True:
+    number = random.randint(1, 100)
+    attempt = 0
 
-#second editing of the code
-while True: 
-    # (paste existing code here) 
-    print("Play again? (y/n)") 
-    if input().lower() != 'y': 
+    print("I'm thinking of a number between 1 and 100!")
+
+    while True:
+        guess = int(input("Your guess: "))
+        attempt += 1
+
+        if guess < number:
+            print("Too low!")
+        elif guess > number:
+            print("Too high!")
+        else:
+            print(f"You win! The number was {number}.")
+            print(f"You made {attempt} attempt(s).")
+            break
+
+    print("Play again? (y/n)")
+    if input().lower() != 'y':
         break
-print(f"You made {attempt} attempts.")
